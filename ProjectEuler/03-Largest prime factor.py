@@ -23,7 +23,7 @@ while True:
 		if mult(listPrimeFactors) == num: break
 
 	
-print("Lista: ", listPrimeFactors)
+print("Largest prime: ", max(listPrimeFactors))
 
 
 
