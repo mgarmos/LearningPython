@@ -29,8 +29,8 @@ def main():
 
         # Increment the angle, then rotate the image.
         angle += 2
-        # image = pg.transform.rotate(ORIG_IMAGE, angle)  # rotate often looks ugly.
-        image = pg.transform.rotozoom(ORIG_IMAGE, angle, 1)  # rotozoom is smoother.
+        image = pg.transform.rotate(ORIG_IMAGE, angle)  # rotate often looks ugly.
+        #image = pg.transform.rotozoom(ORIG_IMAGE, angle, 1)  # rotozoom is smoother.
         # The center of the new rect is the center of the old rect.
         rect = image.get_rect(center=rect.center)
         screen.fill(BG_COLOR)
