@@ -5,22 +5,29 @@ prime is 13.
 
 What is the 10 001st prime number?
 """
+import time, math
+
 # Devuelve true si el número es primo
 def esPrimo(num):
-    for x in range(num-1,int(sqrt(num)),-1):
-        if num % x == 0:
-            return False
-    else:
-        return True
+	RMAX = int(math.sqrt(num))
+	for div in range(2, RMAX+1):
+		if num % div == 0:
+			return False
+	else:
+		return  True	
 
-# Se buscan primos únicamente los numeros impares a partir del 2
-# Se        
-num = 3
-cont = 2
-while cont <= 7:
-    num +=2
+# measure process time
+t0 = time.clock()
+
+INTER = 10001
+   
+num = 0
+cont = 0
+while cont <= INTER:
+    num +=1
     if(esPrimo(num)) == True:
         cont +=1
-   
-    
+
 print(num)
+print ("Seconds time: " , time.clock() - t0)
+

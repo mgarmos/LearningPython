@@ -24,6 +24,7 @@ while True:
 
 	
 print("Largest prime: ", max(listPrimeFactors))
+print ("Secons time: " , time.clock() - t0)
 
 
 
