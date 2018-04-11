@@ -1,0 +1,49 @@
+From: stephen.marquard@ uct.ac.za
+asdf 
+ asdf From: asdff
+as dfasd. From: micasa@pepe.org
+fas dfasd
+From: micasa@pepe.org
+From: stephen.marquard@uct.ac.za, csev@umich.edu, and cwen @ iupui.edu
+
+
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+Return-Path: <postmaster@collab.sakaiproject.org>
+for <source@collab.sakaiproject.org>;
+Received: (from apache@localhost)
+Author: stephen.marquard@uct.ac.za
+136 CHAPTER 11. REGULAR EXPRESSIONS
+
+Received: from IBCASHUBMX3.intranet.ibermatica (192.168.248.24) by
+ IBCASHUBMX2.intranet.ibermatica (192.168.248.23) with Microsoft SMTP Server
+ (TLS) id 14.3.361.1; Wed, 11 Apr 2018 14:20:07 +0200
+Received: from ibasmx1.ibermatica.com (192.168.248.3) by
+ ibcashubmx3.intranet.ibermatica (192.168.248.24) with Microsoft SMTP Server
+ id 14.3.361.1; Wed, 11 Apr 2018 14:20:06 +0200
+Received: from localhost (localhost [127.0.0.1])	by ibasmx1.ibermatica.com
+ (Postfix) with ESMTP id C8D322C0074;	Wed, 11 Apr 2018 14:20:06 +0200 (CEST)
+Received: from ibasmx1.ibermatica.com ([127.0.0.1])	by localhost
+ (ibasmx1.ibermatica.com [127.0.0.1]) (amavisd-new, port 10024)	with ESMTP id
+ ErvQd1y57b4C; Wed, 11 Apr 2018 14:20:06 +0200 (CEST)
+Received: from csm-mx.u2-ibermatica.com (unknown [46.17.143.20])	by
+ ibasmx1.ibermatica.com (Postfix) with ESMTP id B24682C006F;	Wed, 11 Apr 2018
+ 14:20:06 +0200 (CEST)
+Received: from evotras1.evonceib.local (unknown [217.149.152.130])	by
+ csm-mx.u2-ibermatica.com (Postfix) with ESMTP id 90165481E5;	Wed, 11 Apr 2018
+ 14:20:06 +0200 (CEST)
+Received: by evotras1.evonceib.local (Postfix, from userid 0)	id 82E59D809A;
+ Wed, 11 Apr 2018 14:20:06 +0200 (CEST)
+From: <csm-traspasos@ibermatica.com>
+To: <m.garcia@ibermatica.com>, <v.perea@ibermatica.com>,
+	<jo.gonzalez@ibermatica.com>, <b.ortiz@ibermatica.com>,
+	<s.serrano@ibermatica.com>, <am.pastor@ibermatica.com>,
+	<fm.manso@ibermatica.com>, <i.martinez.palacios@ibermatica.com>
+CC: <i.martinez.palacios@ibermatica.com>, <csm-traspasos@ibermatica.com>
+Subject: [EVO] Traspaso evo-sp-svn-20180411-135222.test56juego (MIGOPE) - Terminado
+Message-ID: <20180411122006.82E59D809A@evotras1.evonceib.local>
+Date: Wed, 11 Apr 2018 14:20:06 +0200
+MIME-Version: 1.0
+Content-Type: text/plain
+Return-Path: SistemasOtrosEVO@evotras1.evonceib.local
+X-MS-Exchange-Organization-AuthSource: ibcashubmx3.intranet.ibermatica
+X-MS-Exchange-Organization-AuthAs: Anonymous
