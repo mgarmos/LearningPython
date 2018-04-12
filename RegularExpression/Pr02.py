@@ -10,7 +10,7 @@
 
 # hand.close()
 
-encodings = ['cp1252', 'windows-1250', 'windows-1252', 'utf-8']
+encodings = ['ISO-8859-1','ANSI', 'cp1252', 'windows-1250', 'windows-1252', 'utf-8']
 for e in encodings:
 	try:
 		fh = open('My Clippings.txt', 'r', encoding=e)
