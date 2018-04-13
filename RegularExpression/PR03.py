@@ -12,15 +12,29 @@ anot = anot.replace(u'\ufeff', u'')
 anot = anot.replace(u'\u2666',u'')
 anot = anot.replace(u'\u2015',u'')		
 
-print(anot)
-print("-------------------")
+# print(anot)
+# print("-------------------")
 
 
 # Elimina las lineas en blanco. 
 lines = [x for x in anot.split(u'\r\n') if x] 	#x es True si tiene contenido
 
-print("Título ", lines[0])
-
 for line in lines:
 	print(line)
+print("-------------------")
+
+
+print("Titulo:", lines[0])
+
+match = re.search(r'(\d+)-(\d+)', lines[1])
+position1 = match.group(1)
+position2 = match.group(2)
+print("match: %s - %s" % (position1,position2))
+
+
+
+
+print("Contenido: ", lines[2])
+
+
 	
