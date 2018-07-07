@@ -1,30 +1,36 @@
 from player import Player
+import world
 
 def play():
-    player = Player()
-
-    print('Mensaje de bienvenida')
-
     
 
-    action_input = get_user_command()
-
-    if action_input in ['n', 'N']:
-        print('Ir al norte')
-    elif action_input in ['s', 'S']:
-        print('Ir al sur')
-    elif action_input in ['e', 'E']:
-        print('Ir al este')
-    elif action_input in ['o', 'O']:
-        print('Ir al oeste')
-    elif action_input in ['I', 'i']:        
-        print(player.print_inventory())
+    print('Escape from Cave Terror!')
+    player = Player()
+    while True:
+        room = world.tile_at(player.x, player.y)
+        print(room.intro_text())
+        room.modify_player(player) # New line
+        action_input = get_player_command()
+    
 
 
-    else:
-        print('Acción inválida')
+        if action_input in ['n', 'N']:
+            player.move_north()
+        elif action_input in ['s', 'S']:
+            player.move_south()
+        elif action_input in ['e', 'E']:
+            player.move_east()
+        elif action_input in ['w', 'W']:
+            player.move_west()
+        elif action_input in ['I', 'i']:        
+            print(player.print_inventory())
+        elif action_input in ['A', 'a']:
+            player.attack()
 
-def get_user_command():
+        else:
+            print('Acción inválida')
+
+def get_player_command():
     return input('Accion: ')
 
 
