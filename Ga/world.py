@@ -35,23 +35,28 @@ class VictoryTile(MapTile):
 class VictorTile(MapTile):
     def intro_text(self):
         return """
-        Estas en la habitación de Víctor.
-        Ajj!  Huele a pies
-        Sal de aquí cuanto antes 
+        You're in Víctor's room.
+        Ajj!  It smells like feet
+        Go out quickly or you will died
+        """
+class MomTile(MapTile):
+    def intro_text(self):
+        return """
+        You've enter in mom's room without knocking the door. Mom shouts you.
         """
 
 class AdrianTile(MapTile):
     def intro_text(self):
         return """
-        Estas en la habitación de Adrian.
-        Y de quien es la culpa???
+        You are in Adrian's room.
+        and whose fault is it????
         jajaja
         """ 
 
 class DadTile(MapTile):
     def intro_text(self):
         return """
-        If you jump in dad's bed, he will hit you
+        If you jump in dad's bed, he will nag you
         """
 
 class EnemyTile(MapTile):
@@ -68,9 +73,10 @@ class EnemyTile(MapTile):
         else:
             self.enemy = enemies.RockMonster()
         
-        print("Has Been created: " + self.enemy.name + " in [" + str(x) + "," + str(y) +"]")
-        print("r: " + str(r))
+        # print("Has Been created: " + self.enemy.name + " in [" + str(x) + "," + str(y) +"]")
+        # print("r: " + str(r))
         #print("Has Been created: " + self.enemy.name )
+
         super().__init__(x, y)
 
     def intro_text(self):
@@ -87,9 +93,9 @@ class EnemyTile(MapTile):
                    
 
 world_map = [
-    [BoringTile(0,0),VictoryTile(1,0),DadTile(2,0)],
-    [EnemyTile(0,1),BoringTile(1,1),EnemyTile(2,1)],
-    [BoringTile(0,2),StartTile(1,2),EnemyTile(2,2)],
+    [MomTile(0,0),VictoryTile(1,0),DadTile(2,0)],
+    [EnemyTile(0,1),EnemyTile(1,1),EnemyTile(2,1)],
+    [BoringTile(0,2),StartTile(1,2),BoringTile(2,2)],
     [AdrianTile(0,3),EnemyTile(1,3),VictorTile(2,3)]
 
 ]

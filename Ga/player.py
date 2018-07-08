@@ -11,7 +11,7 @@ class Player:
     hp = 100
 
     def __init__(self):
-        self.inventory = [items.Rock(), items.Dagger(),'Gold(5)','Crusty Bread']
+        self.inventory = [items.Rock(), items.Dagger(),'Gold(5)',items.CrustyBread()]
 
 
 
@@ -63,5 +63,8 @@ class Player:
         if not enemy.is_alive():
             print("You killed {}!".format(enemy.name))
         else:
-            print("{} HP is {}.".format(enemy.name, enemy.hp))        
+            print("{} HP is {}.".format(enemy.name, enemy.hp))
 
+
+    def heal(self):
+        consumables = [item for item in self.inventory if isinstance(item, items.Consumable)]
