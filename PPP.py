@@ -2,11 +2,8 @@ import random
 # import textwrap
 
 if __name__ == '__main__':
-    print('Hola Mundo')
-    keep_playing = 'y'
-    occupants = ['enemy', 'friend', 'unoccupied']
 
-    width =72
-    dotted_line = '-' * width
-    print(dotted_line)
-    print("\033[1m" + 'Attacks of the Orcs' + "\033[0m")
+    lista = [1,2,3,4,5,6,7,8]
+
+    for item in enumerate(lista,4):
+        print("{} en {}".format(item,1))

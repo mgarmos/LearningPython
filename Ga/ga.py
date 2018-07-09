@@ -9,8 +9,8 @@ def play():
     while True:
         room = world.tile_at(player.x, player.y)
 
-        print(player.x)
-        print(player.y)
+        # print(player.x)
+        # print(player.y)
 
 
         print(room.intro_text())
@@ -26,7 +26,7 @@ def play():
             player.hp -= 15
 
 
-        # Termina el juego
+        # Finish ga
         if player.hp < 1:
             print('PLAYER DIED')
             return
@@ -65,6 +65,13 @@ def play():
         elif action_input in ['I', 'i']:        
             print(player.print_inventory())
             print (player.hp)
+
+        elif action_input in ['h', 'H']:
+            player.heal()
+
+        elif action_input in ['q', 'Q']:
+            print('Finished')
+            return                       
                         
         else:
             print('Acción inválida')
