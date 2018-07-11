@@ -11,7 +11,7 @@ class Player:
     hp = 100
 
     def __init__(self):
-        self.inventory = [items.Rock(), items.Dagger(),'Gold(5)',items.CrustyBread()]
+        self.inventory = [items.Rock(), items.Dagger(),'Gold(5)',items.CrustyBread(),items.Banana()]
 
 
 

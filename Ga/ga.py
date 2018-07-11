@@ -1,11 +1,20 @@
 from player import Player
 import world
+import OrderedDict
 
 def play():
+
+    actions = OrderedDict()
+    actions[]
+
+
+
+    player = Player()
+
     
 
     print('Escape from Cave Terror!')
-    player = Player()
+
     while True:
         room = world.tile_at(player.x, player.y)
 
