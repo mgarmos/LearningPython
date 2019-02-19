@@ -11,7 +11,8 @@ class Pattern:
 
 
     def getNotes(self):
-        scala  = [60, 62, 64, 65, 67, 69, 71, 72]  # MIDI note number
+        # scala  = [60, 62, 64, 65, 67, 69]  # MIDI note number
+        scala  = [60]  # MIDI note number
         notes = []
         note = []
         for duration in self.rithm:
