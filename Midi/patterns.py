@@ -46,4 +46,9 @@ class A4(Pattern):
 class A5(Pattern):
     def __init__(self):
         self.name = "Duda-du"
-        self.rithm = [0.5, 0.5, 1]			
+        self.rithm = [0.5, 0.5, 1]
+
+class I1(Pattern):
+    def __init__(self):
+        self.name = "Inicio"
+        self.rithm = [1,1,1,1]					

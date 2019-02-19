@@ -4,9 +4,9 @@ import patterns
 from midiutil import MIDIFile
 
 track    = 0
-channel  = 0
-time     = 0    # In beats
-duration = 1    # In beats
+channel  = 9
+time     = 4    # In beats
+
 tempo    = 10   # In BPM
 volume   = 127  # 0-127, as per the MIDI standard
 
@@ -41,6 +41,7 @@ print(text)
 MyMIDI = MIDIFile(1)  # One track, defaults to format 1 (tempo track is created
                       # automatically)
 MyMIDI.addTempo(track, time, tempo)
+
 
 for event in song:
     track, channel, pitch, time, duration, volume = event
