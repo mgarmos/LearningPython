@@ -41,6 +41,7 @@ print(text)
 MyMIDI = MIDIFile(1)  # One track, defaults to format 1 (tempo track is created
                       # automatically)
 MyMIDI.addTempo(track, time, tempo)
+#MyMIDI.addTimeSignature(tick, numerator, denominator, clocks_per_tick,notes_per_quarter)
 
 
 for event in song:
