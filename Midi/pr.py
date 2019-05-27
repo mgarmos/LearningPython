@@ -16,6 +16,16 @@ words = [patterns.A1, patterns.A2,  patterns.A3]
 
 # print(patterns.A3().getNotes())
 
+def getWord(length, patternChoice):
+	
+	word = []
+	for i in range(length):
+		pattern = random.choice(patternChoice)()
+		word.append(pattern.name)
+	
+	print(word)
+	
+
 
 text = []
 song = []
@@ -41,7 +51,6 @@ print(text)
 MyMIDI = MIDIFile(1)  # One track, defaults to format 1 (tempo track is created
                       # automatically)
 MyMIDI.addTempo(track, time, tempo)
-#MyMIDI.addTimeSignature(tick, numerator, denominator, clocks_per_tick,notes_per_quarter)
 
 
 for event in song:
