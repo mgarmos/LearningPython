@@ -1,7 +1,8 @@
 import random
 import patterns
 
-patternChoice = [patterns.A1, patterns.A2,  patterns.A3, patterns.A4, patterns.A5]
+#patternChoice = [patterns.A1, patterns.A2,  patterns.A3, patterns.A4, patterns.A5]
+patternChoice = [patterns.B1, patterns.B2, patterns.B3, patterns.B4, patterns.B5, patterns.B6]
 
 # print(patterns.A3().getNotes())
 
