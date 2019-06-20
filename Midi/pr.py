@@ -1,5 +1,6 @@
 import random
 import patterns
+import word
 
 from midiutil import MIDIFile
 
@@ -16,15 +17,6 @@ words = [patterns.A2, patterns.A2, patterns.A4, patterns.A5]
 
 # print(patterns.A3().getNotes())
 
-# Define Time Signature
-# time = 0
-# track = 0
-# numerator = 4
-# denominator = 2
-# clocks_per_tick = 24
-# MyMIDI = MIDIFile(1, file_format=2)
-# MyMIDI.addTimeSignature(track, time, numerator, denominator, clocks_per_tick)
-# MyMIDI.close()
 
 def printSong(cadena):
 	for i in range(len(cadena)):

@@ -8,10 +8,10 @@ dupleSyllablesChoice = [A1,A2,A3,A4,A5]
 tripleSyllablesChoice = [B1,B2,B3,B4,B5,B6]
 
 def getDupleWord():
-	__getWord(2)
+	return __getWord(2)
 		
 def getTripleWord():
-	__getWord(3)
+	return __getWord(3)
 		
 def __getWord(meter):
 	word = []
@@ -19,13 +19,11 @@ def __getWord(meter):
 	for i in range(4):
 		syllable = random.choice(syllablesChoice)()
 		word.append(syllable.name)
-	print(word)
 	return word
 
 def printWord(word):
 	pass
 			
 	
-getDupleWord()
-getTripleWord()
-	
+#getDupleWord()
+#getTripleWord()
