@@ -18,12 +18,9 @@ def __getWord(meter):
 	syllablesChoice = dupleSyllablesChoice if meter == 2 else tripleSyllablesChoice
 	for i in range(4):
 		syllable = random.choice(syllablesChoice)()
-		word.append(syllable.name)
+		word.append(syllable)
 	return word
 
 def printWord(word):
 	pass
 			
-	
-#getDupleWord()
-#getTripleWord()

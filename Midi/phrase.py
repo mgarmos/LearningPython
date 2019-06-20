@@ -42,25 +42,25 @@ def getPhrase(length):
         phrase.append(wordRequested)
     return phrase
 
-	
-	
+    
+    
 # Under construction    
 def phraseToNotes(phrase):
     notes = []
     for wordInPrhase in phrase:
-        print(type(wordInPrhase))
         for syllable in wordInPrhase:
-            print(type(syllable))
-            for item in (syllable):
-                #notes.append(Note(channel, Side_Stick, syllable.rythm[item], volume, ''))
-                #print(item)
-                pass
-            print(syllable,)
-        print()
+            for item in (syllable.getRythm()):
+                myNote = Note(channel, Side_Stick, item, volume, '') # The instrument is setted
+                notes.append(myNote)
+                #print(myNote)
+            #print(syllable,)
+        #print()
+    #print(notes)
+    return notes
 
         
 #myNote = Note(1,120,1,127,'annotation')
 #print(myNote)        
 #word.getDupleWord()
-print((Syllable)(getPhrase(4)[2][1]))
-#print(phraseToNotes(getPhrase(4)))
+#print((Syllable)(getPhrase(4)[2][1]))
+print(phraseToNotes(getPhrase(4)))

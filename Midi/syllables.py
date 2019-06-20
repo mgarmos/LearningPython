@@ -69,4 +69,6 @@ class B5(Syllable):
 class B6(Syllable):
     def __init__(self):
         self.name = "DU-Ta DA-Ta DI-Ta"
-        self.rhythm = [3]		
+        self.rhythm = [3]
+
+		
