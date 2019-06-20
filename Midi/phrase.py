@@ -58,9 +58,17 @@ def phraseToNotes(phrase):
     #print(notes)
     return notes
 
+def printPhrase(phrase):
+   notes = []
+   for wordInPrhase in phrase:
+       print(str(wordInPrhase))
+
+
         
 #myNote = Note(1,120,1,127,'annotation')
 #print(myNote)        
 #word.getDupleWord()
 #print((Syllable)(getPhrase(4)[2][1]))
-print(phraseToNotes(getPhrase(4)))
+#print(phraseToNotes(getPhrase(4)))
+
+printPhrase(getPhrase(4))

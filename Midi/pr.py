@@ -12,7 +12,7 @@ tempo    = 60   # In BPM
 volume   = 127  # 0-127, as per the MIDI standard
 
 words = [patterns.A2, patterns.A2, patterns.A4, patterns.A5]
-#words = [patterns.A1, patterns.A1, patterns.A2, patterns.A2, patterns.A3, patterns.A3, patterns.A4, patterns.A5]
+words = [patterns.A1, patterns.A1, patterns.A2, patterns.A3, patterns.A4, patterns.A5]
 
 
 # print(patterns.A3().getNotes())
@@ -46,6 +46,14 @@ for i in range(136):
 	pattern = random.choice(words)()
 	text.append(pattern.name)
 
+# Ritmo
+	event = [track, channel,34,time,1,127]
+	song.append(event)
+
+
+
+
+
 	for note in pattern.getNotes():
 		
 		event = [track, channel]
@@ -69,5 +77,5 @@ for event in song:
     track, channel, pitch, time, duration, volume = event
     MyMIDI.addNote(track, channel, pitch, time, duration, volume)
 
-with open("C:/Users/magarami/Desktop/major-scale1.mid", "wb") as output_file:
+with open("C:/Users/magarami/Desktop/rythmTraining.mid", "wb") as output_file:
     MyMIDI.writeFile(output_file)
