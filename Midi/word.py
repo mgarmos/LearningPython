@@ -1,20 +1,31 @@
 import random
-import patterns
+from syllables import A1,A2,A3,A4,A5,B1,B2,B3,B4,B5,B6
 
-#patternChoice = [patterns.A1, patterns.A2,  patterns.A3, patterns.A4, patterns.A5]
-patternChoice = [patterns.B1, patterns.B2, patterns.B3, patterns.B4, patterns.B5, patterns.B6]
 
-# print(patterns.A3().getNotes())
+# TODO meter to constant
 
-def getWord(length, patternChoice):
-	for j in range(2):
-		word = []
-		for i in range(length):
-			pattern = random.choice(patternChoice)()
-			word.append(pattern.name)
+dupleSyllablesChoice = [A1,A2,A3,A4,A5]
+tripleSyllablesChoice = [B1,B2,B3,B4,B5,B6]
+
+def getDupleWord():
+	__getWord(2)
 		
-		print(word)
-	
+def getTripleWord():
+	__getWord(3)
+		
+def __getWord(meter):
+	word = []
+	syllablesChoice = dupleSyllablesChoice if meter == 2 else tripleSyllablesChoice
+	for i in range(4):
+		syllable = random.choice(syllablesChoice)()
+		word.append(syllable.name)
+	print(word)
+	return word
 
-getWord(4,patternChoice)
+def printWord(word):
+	pass
+			
+	
+getDupleWord()
+getTripleWord()
 	
