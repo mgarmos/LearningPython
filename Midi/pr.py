@@ -6,7 +6,7 @@ from midiutil import MIDIFile
 
 track    = 0
 channel  = 9
-time     = 4    # In beats
+time     = 0    # In beats
 
 tempo    = 60   # In BPM
 volume   = 127  # 0-127, as per the MIDI standard
@@ -25,9 +25,6 @@ def printSong(cadena):
 			print("|")
 
 
-
-
-
 def getWord(length, patternChoice):
 	
 	word = []
@@ -38,20 +35,22 @@ def getWord(length, patternChoice):
 	#print(word)
 	
 
-
 text = []
 song = []
+
+# Introduction
+for i in range(4):
+    event = [track, channel,34,time,1,127]
+    song.append(event)
+    time += 1 # Update time
 
 for i in range(136):
 	pattern = random.choice(words)()
 	text.append(pattern.name)
 
-# Ritmo
+    # Tick in first measure
 	event = [track, channel,34,time,1,127]
 	song.append(event)
-
-
-
 
 
 	for note in pattern.getNotes():
@@ -63,13 +62,13 @@ for i in range(136):
 		event.append(volume)
 		#print(event)
 		song.append(event)
+        time += note[1] # Update time		
 
-		time += note[1] # Update time
+		
 
 printSong(text)
 
-MyMIDI = MIDIFile(1)  # One track, defaults to format 1 (tempo track is created
-                      # automatically)
+MyMIDI = MIDIFile(1)  # One track, defaults to format 1 (tempo track is created automatically)
 MyMIDI.addTempo(track, 0, tempo)
 
 

@@ -71,4 +71,3 @@ class B6(Syllable):
         self.name = "DU-Ta DA-Ta DI-Ta"
         self.rhythm = [3]
 
-		

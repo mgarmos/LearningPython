@@ -23,4 +23,3 @@ def __getWord(meter):
 
 def printWord(word):
 	pass
-			

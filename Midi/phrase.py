@@ -1,10 +1,6 @@
 import word
+from enum import Enum
 
-track    = 0
-channel  = 9
-time     = 4    # In beats
-
-tempo    = 60   # In BPM
 volume   = 127  # 0-127, as per the MIDI standard 
 
 
@@ -12,63 +8,57 @@ Hand_Clap = 39
 Side_Stick = 37
 Short_Whistle = 71
 
+class Meter(Enum):
+    DUPLE = 2
+    TRIPLE = 3
+
 class Note:
     '''
     A class that encapsulates a note
     '''
 
-    def __init__(self, channel, pitch, duration, volume, annotation=None):
+    def __init__(self, pitch, duration):
         self.pitch = pitch
-        self.duration = duration
-        self.volume = volume
-        self.channel = channel
-        self.annotation = annotation
-        
+        self.duration = duration    
 
     def __eq__(self, other):
-        return (self.pitch == other.pitch and self.channel == other.channel)
-
+        return (self.pitch == other.pitch)
 
     def __str__(self):
-        #return '%d channel %d pitch %d duration %d volume %s annotation' % (self, self.channel, self.pitch, self.duration, self.volume, self.annotation)
-        return 'channel: {} pitch: {} duration: {} volume: {} annotation: {}'.format(self.channel, self.pitch, self.duration, self.volume, self.annotation)
+        return 'pitch: {} duration: {} '.format(self.pitch, self.duration)
+		
+    def getPitch(self):
+        return self.pitch
+		
+    def getDuration(self):
+        return self.duration		
         
 
 
-def getPhrase(length):
+def getPhrase(length, meter= Meter.DUPLE):
     phrase = []  # A phrase is a list of words. A word is a list of four syllables
     for i in range(length):
-        wordRequested = word.getDupleWord()
+        wordRequested = word.getDupleWord() if meter == Meter.DUPLE else word.getTripleWord()		
         phrase.append(wordRequested)
     return phrase
 
     
-    
-# Under construction    
+      
 def phraseToNotes(phrase):
     notes = []
     for wordInPrhase in phrase:
         for syllable in wordInPrhase:
             for item in (syllable.getRythm()):
-                myNote = Note(channel, Side_Stick, item, volume, '') # The instrument is setted
+                myNote = Note(Side_Stick, item) # The instrument is setted
                 notes.append(myNote)
-                #print(myNote)
-            #print(syllable,)
-        #print()
-    #print(notes)
     return notes
 
-def printPhrase(phrase):
-   notes = []
-   for wordInPrhase in phrase:
-       print(str(wordInPrhase))
+def printPhrase(myPhrase):
+    for myWord in myPhrase:
+        for syllable in myWord:
+	        print(syllable,end=', ')
+        print('')
 
 
-        
-#myNote = Note(1,120,1,127,'annotation')
-#print(myNote)        
-#word.getDupleWord()
-#print((Syllable)(getPhrase(4)[2][1]))
-#print(phraseToNotes(getPhrase(4)))
+	   
 
-printPhrase(getPhrase(4))
