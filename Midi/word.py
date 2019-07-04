@@ -7,6 +7,10 @@ from syllables import A1,A2,A3,A4,A5,B1,B2,B3,B4,B5,B6
 dupleSyllablesChoice = [A1,A2,A3,A4,A5]
 tripleSyllablesChoice = [B1,B2,B3,B4,B5,B6]
 
+
+def __str__(self):
+    print('hi')
+
 def getDupleWord():
 	return __getWord(2)
 		
@@ -23,3 +27,10 @@ def __getWord(meter):
 
 def printWord(word):
 	pass
+    
+def main():
+  dupleWord = getDupleWord()
+  print(dupleWord)
+  
+if __name__== "__main__":
+  main()
