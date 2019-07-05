@@ -35,7 +35,7 @@ def toFile(fileName, myPhrase, metronome = True):
     for wordInPrhase in myPhrase.phrase:
         for syllable in wordInPrhase:
             
-            # Tick in first measure
+            # Tick in first beat
             if metronome == True:
                 MyMIDI.addNote(track, channel, bitCode, time, 1, volume)
                 
@@ -43,20 +43,25 @@ def toFile(fileName, myPhrase, metronome = True):
                 #print(item)
                 MyMIDI.addNote(track, channel, soundCode, time, item, volume)
                 time += item # Update time
-                print("timeitem: %s -> : %s"% (time, item))
+                #print("timeitem: %s -> : %s"% (time, item))
        
     #If name is empty geneates a TimeStampName
     if not fileName and not fileName.strip():
         timestr = timeUtil.strftime("%Y%m%d-%H%M%S")
-        fileName = "%s-%s.mid"% (timestr, myPhrase.meter.name)
+        fileName = "%s-%s"% (timestr, myPhrase.meter.name)
                 
-    #Write file
-    with open(fileName, "wb") as output_file:
+    #Write midi file
+    with open(fileName + '.mid', "wb") as output_file:
         MyMIDI.writeFile(output_file)             
-    print('written file to %s'% fileName)
+    
+    #Write text file      
+    print(myPhrase,  file=open(fileName + '.txt', 'w'))        
+        
+    print('written file to %s'% fileName)    
+        
 
 def main():
-    myPhraseObj = phrase.Phrase(1,phrase.Meter.DUPLE) #length:2, meter=DUPLE
+    myPhraseObj = phrase.Phrase(4,phrase.Meter.DUPLE) #length:2, meter=DUPLE
     print(myPhraseObj)
     toFile('', myPhraseObj)
     

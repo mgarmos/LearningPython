@@ -29,8 +29,9 @@ def printWord(word):
 	pass
     
 def main():
-  dupleWord = getDupleWord()
-  print(dupleWord)
+  #dupleWord = getDupleWord()
+  #print(dupleWord)
+  print(dupleSyllablesChoice)
   
 if __name__== "__main__":
   main()
