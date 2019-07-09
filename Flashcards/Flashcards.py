@@ -83,8 +83,8 @@ while(more=='y'):
 		choice=5
 	else:
 		print ("\n\nChoose a review order or add cards.")
-		print ("\n[1] Forward\n [2] Backward\n  [3] Randomized\n   [4] Past performance")
-		print ("    [5] Add cards")
+		print ("\n[1] Forward\n[2] Backward\n[3] Randomized\n[4] Past performance")
+		print ("[5] Add cards")
 		choice=int(input("\nSelection: "))
 	while(choice<1 or choice>5):
 		choice=int(input("Select an option between 1 and 5 inclusive: "))
@@ -100,7 +100,7 @@ while(more=='y'):
 			cards.append([side1,side2])
 	else:
 		print ("\nDo you want to do the cards front-side up or back-side up?")
-		print ("\n[1] Front-side up\n [2] Back-side up")
+		print ("\n[1] Front-side up\n[2] Back-side up")
 		choice2=int(input("\nSelection: "))
 		while(choice2<1 or choice2>2):
 			choice=int(input("Select an option between 1 and 2 inclusive: "))
