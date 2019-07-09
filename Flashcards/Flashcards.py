@@ -51,10 +51,7 @@ def check_file_exists(filepath, mode):
 		return False
 	return True	
 
-
-
-def main():
-
+def load_flashcards():
     #load the word-definition pairs into a list
     if(check_file_exists("flashcard_content.txt","r")):
         with open("flashcard_content.txt","r") as ifile:
@@ -67,6 +64,11 @@ def main():
         with open("flashcard_content.txt","w") as ofile:
             ofile.write('[]')
         print ("\nThe file 'flashcard_content.txt' has been created for new flashcards\n")
+
+
+def main():
+
+    load_flashcards()
 
     #prepare scoring array
     #check if the scoring file exists, create one if it doesn't
