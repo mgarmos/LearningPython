@@ -72,8 +72,7 @@ class B6(Syllable):
         self.rhythm = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
         
 def main():
-    rythmPattern = B5
-    print(B5.getRythm())
+    print(B5().getRythm())
   
 if __name__== "__main__":
     main()         
